@@ -20,18 +20,7 @@ public class Vote {
     /**
      * The vote cast by the voter. True represents a vote in favor, false represents a vote against.
      */
-    private boolean vote;
-
-    /**
-     * Constructor that initializes a Vote object with a specific voterID and vote value.
-     *
-     * @param voterID The unique identifier for the voter.
-     * @param vote The vote cast by the voter.
-     */
-    public Vote(int voterID, boolean vote) {
-        this.voterID = voterID;
-        this.vote = vote;
-    }
+    private int vote;
 
     /**
      * Constructor that initializes a Vote object with a specific vote value, but without a specific voterID.
@@ -39,6 +28,17 @@ public class Vote {
      * @param vote The vote cast by the voter.
      */
     public Vote(boolean vote) {
+        this.vote = vote ? 1 : 0;
+    }
+
+    /**
+     * Constructor that initializes a Vote object with a specific voterID and vote value.
+     *
+     * @param voterID The unique identifier for the voter.
+     * @param vote    The vote cast by the voter.
+     */
+    public Vote(int voterID, int vote) {
+        this.voterID = voterID;
         this.vote = vote;
     }
 
@@ -65,7 +65,7 @@ public class Vote {
      *
      * @return The vote value of the Vote object.
      */
-    public boolean getTheVote() {
+    public int getTheVote() {
         return vote;
     }
 
@@ -74,7 +74,7 @@ public class Vote {
      *
      * @param theVote The new vote value for the Vote object.
      */
-    public void setTheVote(boolean theVote) {
+    public void setTheVote(int theVote) {
         this.vote = theVote;
     }
 

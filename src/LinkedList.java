@@ -256,7 +256,7 @@ class LinkedList<ItemType> {
         StringBuilder strBuilder = new StringBuilder();
         Node currPos = first;
         while (currPos != null) {
-            strBuilder.append(currPos.value + "\n");
+            strBuilder.append(currPos.value).append("\n");
             currPos = currPos.next;
         }
         return strBuilder.toString();
@@ -268,6 +268,7 @@ class LinkedList<ItemType> {
      * @param target The item to count.
      * @return The number of occurrences of the item in the list.
      */
+    //
     public int countItems(ItemType target) {
         int returnCount = 0;
         ItemType currentItem;

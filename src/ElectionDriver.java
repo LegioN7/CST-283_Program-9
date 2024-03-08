@@ -30,6 +30,11 @@
 public class ElectionDriver {
 
     /**
+     * The filename of the file containing the main votes.
+     */
+    static final String MAIN_VOTES = "mainvotes.txt";
+
+    /**
      * The filename of the file containing the votes to be added.
      */
     static final String ADD_VOTES = "absentee.txt";
@@ -47,7 +52,7 @@ public class ElectionDriver {
     public static void main(String[] args) {
 
         // Create an Election object and add votes from mainvotes.txt
-        Election policy101 = new Election("mainvotes.txt");
+        Election policy101 = new Election(MAIN_VOTES);
 
         // Add votes from absentee.txt
         policy101.addVotes(ADD_VOTES);
